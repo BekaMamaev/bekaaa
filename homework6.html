@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Form Elements</title>
+</head>
+<body>
+    <form action="/submit" method="post"> <!---form - создает контейнер для формы, указывая метод отправки-->
+        <fieldset> <!---fieldset - группирует элементы формы-->
+            <legend>Registration Form</legend> <!---legend - делает заголовок для этой группы-->
+
+            <label for="name">Name:</label> <!---label - связывает метку с элементом ввода-->
+            <input type="text" id="name" name="name" required> <!---input - сам элемент ввода, type - тип элемента, required - поле обязательно для заполнения-->
+
+            <p><label for="email">Email:</label>
+            <input type="email" id="email" name="email" required></p>
+
+            <p><label for="password">Password:</label>
+            <input type="password" id="password" name="password" required></p>
+
+            <p><label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" rows="4" cols="35"></textarea><br><br></p> <!---textarea - окошко для многострочного текста, 4 строки и 35 символов--->
+
+            <p><label for="country">Country:</label> 
+                <select id="country" name="country" required> <!---select - раскрывающийся список--->
+                    <option value="">Select your country</option> <!---option - вариант выбора в списке-->
+                    <option value="us">United States</option>
+                    <option value="ru">Russia</option>
+                    <option value="kz">Kazakhstan</option>
+                </select>
+            </p>
+
+            <button type="submit">Submit</button> <!---button - кнопка, если type="submit" то он отправляет форму--->
+            <button type="reset">Reset</button> <!---если type="reset" то он сбрасывает форму--->
+        </fieldset>
+    </form>
+</body>
+</html>
